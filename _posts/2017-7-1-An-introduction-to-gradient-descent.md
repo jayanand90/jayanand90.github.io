@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  An introduction to gradient descent
