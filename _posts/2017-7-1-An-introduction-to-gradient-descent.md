@@ -4,7 +4,7 @@ title:  "An introduction to gradient descent"
 excerpt: "The gradient descent algorithm is widely used across several machine learning techniques. It forms the backbone of neural networks and backpropagation.                                                                                                           
 In this post, let's try to understand how gradient descent works, and also get a mathematical intution behind this ubiquitous technique!."
 images:
-  - url: ../images/grad_desc/jack_and_jill.png
+  - "../images/grad_desc/jack_and_jill.png"
 ---
 
 
