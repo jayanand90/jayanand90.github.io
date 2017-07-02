@@ -6,3 +6,4 @@ $\partial J $
 \(inline\)
 [display\]
 \\( sin(x^2) \\)
+$ x + 3 $
