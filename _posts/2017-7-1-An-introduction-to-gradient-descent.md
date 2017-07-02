@@ -1,6 +1,6 @@
 
 
-# An introduction to Gradient Descent
+
 
 
 <img src="../images/grad_desc/jack_and_jill.png">
