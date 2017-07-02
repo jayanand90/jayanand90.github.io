@@ -4,7 +4,7 @@ title:  An introduction to gradient descent
 excerpt_separator: <!--more-->
 ---
 
-<img src="../images/grad_desc/jack_and_jill.png">
+<img src="../images/grad_desc/jack_and_jill.png,width=180,height=60">
 
 
 The gradient descent algorithm is widely used across several machine learning techniques. It forms the backbone of neural networks and backpropagation.                                                                                                           
@@ -109,7 +109,7 @@ Now that we have defined our cost function as the sum of squared errors, let us 
 
 $\large J = \sum_i^n (y_{pred} - y)^2$                                                                                                                                                                                                                                 
 
-$\large \:\:\:\,  = \sum_i^n (mx + c - y)^2$
+$\large \;\;\;\,  = \sum_i^n (mx + c - y)^2$
 
 $x$ and $y$ are aready provided in the form of the input data and we have no control over them; what we _can_ control are the line's parameters, namely the slope $m$ and the intercept $c$.                                                                                                      
 Stated in another way, we need to **find the values of $m$ and $c$ that make the value of $J$ minimum**, for the given input data. The slope and the intercept are the knobs we can play with, in order to minimize $J$.
