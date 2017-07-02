@@ -4,7 +4,7 @@ title:  An introduction to gradient descent
 excerpt_separator: <!--more-->
 ---
 
-<img src="../images/grad_desc/jack_and_jill.png,width=180,height=60">
+<img src="../images/grad_desc/jack_and_jill.png",width=180,height=60>
 
 
 The gradient descent algorithm is widely used across several machine learning techniques. It forms the backbone of neural networks and backpropagation.                                                                                                           
