@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I am an electrical enginner working at Intel, Portland in the field of VLSI physical design.
+Prior to my current role, I was a Master's student at the University of Maryland, College Park.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[jayanand90@gmail.com](mailto:jayanand90@gmail.com)
