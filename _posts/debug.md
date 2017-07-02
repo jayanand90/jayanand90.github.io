@@ -3,3 +3,5 @@
 
 $$ y = mx + c $$
 $\partial J $
+\(inline\)
+[display\]
