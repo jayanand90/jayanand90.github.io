@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  An introduction to gradient descent
+title:  An Introduction to Gradient Descent
 excerpt_separator: <!--more-->
 ---
 
