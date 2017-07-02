@@ -1,6 +1,7 @@
-
-
-# An introduction to Gradient Descent
+---
+layout: post
+title: An introduction to gradient descent
+---
 
 
 <img src="../images/grad_desc/jack_and_jill.png">
