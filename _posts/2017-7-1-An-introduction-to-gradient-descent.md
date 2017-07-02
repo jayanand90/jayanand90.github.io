@@ -32,13 +32,13 @@ $\normalsize f $ is a function of two variables: x and y. Therefore, it has two 
 
 $\large \frac{\partial f}{\partial x} = \normalsize 4x$
 
-$\large \frac{\partial f}{\partial y} = \normalsize - \: cos(y)$ 
+$\large \frac{\partial f}{\partial y} = \normalsize - \; cos(y)$ 
 
 
 Remember, these are just the individual components of the vector. The gradient is obtained by combining them in their respective directions.
 
 
-$\normalsize \nabla f = \large\left(\frac{\partial f}{\partial x}\right) \small \hat i + \large \left(\frac{\partial f}{\partial y}\right) \small \hat j \: \normalsize = \: {4x} \small \: \hat i - \normalsize cos(y) \small \: \hat j$  
+$\normalsize \nabla f = \large\left(\frac{\partial f}{\partial x}\right) \small \hat i + \large \left(\frac{\partial f}{\partial y}\right) \small \hat j \; \normalsize = \; {4x} \small \; \hat i - \normalsize cos(y) \small \; \hat j$  
 
 It can be seen from here why the concept of a gradient makes sense only when the function is of two or more variables.
 When $f$ depends on only one variable (say $x$), the gradient is just the slope, $df/dx$.  There is no need for partial derivatives.
@@ -109,7 +109,7 @@ Now that we have defined our cost function as the sum of squared errors, let us 
 
 $\large J = \sum_i^n (y_{pred} - y)^2$                                                                                                                                                                                                                                 
 
-$\large \:\:\:\:  = \sum_i^n (mx + c - y)^2$
+$\large \:\:\:\,  = \sum_i^n (mx + c - y)^2$
 
 $x$ and $y$ are aready provided in the form of the input data and we have no control over them; what we _can_ control are the line's parameters, namely the slope $m$ and the intercept $c$.                                                                                                      
 Stated in another way, we need to **find the values of $m$ and $c$ that make the value of $J$ minimum**, for the given input data. The slope and the intercept are the knobs we can play with, in order to minimize $J$.
