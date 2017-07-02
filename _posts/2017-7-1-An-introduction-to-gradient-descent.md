@@ -9,6 +9,8 @@ In this post, let's try to understand how gradient descent works, and also get a
 
 <img src="../images/grad_desc/gd_demo.gif">
 
+<!--more-->
+
 ### What is a gradient ?
 
 The gradient of a function at a specified point is much like its slope; only, it's a _vector_ (unlike the slope, which is a scalar).                                
