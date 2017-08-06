@@ -183,9 +183,9 @@ The output is the following:
 
 
     {'': 0,
-     'campfest': 1,
-     'coffie': 2,
-     'synch': 3,
+     'campfest'- 1,
+     'coffie'- 2,
+     'synch'- 3,
      'migrs': 4,
      'chrysler': 5,
      'frameworks': 6,
