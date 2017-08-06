@@ -66,7 +66,7 @@ fr.close()
 fl = open('labels.txt','r')
 labels = list(map(lambda a:a[:-1],fl.readlines()))
 fl.close()
-<pre>
+</pre>
 
 Let's take a look at some reviews and their labels to get a feel for the data.
 
