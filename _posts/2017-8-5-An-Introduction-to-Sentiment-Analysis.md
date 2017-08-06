@@ -210,7 +210,7 @@ The first few elements are zeros since this particular one-line review doesn't c
 
 ## Training
 
-<img src="../images/sent_analysis/nn_imdb_2.png">
+<img src="../images/sent_analysis/nn_imdb_3.png">
 
 The model we will discuss here is a two layer neural network. (excluding the input).
 
