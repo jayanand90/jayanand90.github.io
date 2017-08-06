@@ -1,7 +1,12 @@
-
-# An Introduction to Sentiment Analysis
+---
+layout: post
+title:  An Introduction to Sentiment Analysis
+excerpt_separator: <!--more-->
+---
 
 One of the many things our brains do very well during language processing, is the task of abstracting out details, keeping only information that is relevant, and then proceeding to form a quick summary. For example, we could read a sizable paragraph of text (like an article), and come up with a one-line summary or a heading that best describes it. 
+
+<!--more-->
 
 Many times, we can also gauge the underlying mood that a passage of text conveys. For example, upon reading a product review on Amazon or eBay, we get an idea of whether the buyer was "happy", "angry", "disappointed" or something else. After reading a movie review, we know broadly whether the movie is "good" or "bad". Our brains are naturally adept at extracting "emotion" from mere text, which necessitates the following question: Can a computer do it ?  Given text (be it a single line or several pages), can a machine capture the emotion or sentiment that the text conveys ?     
 
@@ -137,10 +142,8 @@ Basically this involves the following steps:
     
 The example given in the above article illustrates these 3 steps well.
 
-
+### Step 1 - Find number of unique words across all reviews
 <pre class="brush: python">
-## Step 1 - Find number of unique words across all reviews
-
 from collections import Counter
 total_counts = Counter()
 for i in range(len(reviews)):
@@ -166,10 +169,8 @@ There are 74,074 unique words in our dataset. We will represent each review usin
 
 &nbsp;
 
-
+### Step 2 - Create a dictionary/look-up table for each of these 74074 words
 <pre class="brush: python">
-## Step 2- Create a dictionary/look-up table for each of these 74074 words
-
 word2index = {}
 for i,word in enumerate(set(total_counts)):
     word2index[word] = i
@@ -190,9 +191,10 @@ The output is the following:
 &nbsp;
 
 
-```python
-## Step 3 - Transform each review into a fixed-length feature vector using the dictionary created in step 2
-```
+
+### Step 3
+Transform each review into a fixed-length feature vector using the dictionary created in step 2
+
 
 Using a one-line review as an example -  "The movie is the best in recent times" - simply update the placeholder indices for these words with their counts. That is, if the lookup value for *movie* is 10, *the* is 43,002, then the feature vector for this movie would like:
 
@@ -264,14 +266,6 @@ In the positive graph, we can see words like "fascinating", "wonderfully", "awes
 ## Conclusions
 
 While this post dealt with a binary sentiment prediction, a similar approach can very well be followed for a multi-class prediction, such as predicting a star rating out of 5 for a movie or a product. Advances in the field of NLP have resulted in widespread use of sentiment anaylsis in many fields where there is some sort of user feedback, such as customer surveys, social media online shopping etc, where sentiment is mined from text to drive product improvement and marketing techniques such as recommender systems.
-
-
-<pre class="brush: python">
-X = np.array([ [0,0,1],[0,1,1],[1,0,1],[1,1,1] ])
-y = np.array([[0,1,1,0]]).T
-syn0 = 2*np.random.random((3,4)) - 1
-syn1 = 2*np.random.random((4,1)) - 1
-</pre>
 
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shCore.css">
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shThemeDefault.css">
