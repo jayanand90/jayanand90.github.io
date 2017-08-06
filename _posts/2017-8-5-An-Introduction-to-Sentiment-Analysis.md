@@ -279,6 +279,10 @@ In the positive graph, we can see words like "fascinating", "wonderfully", "awes
 
 While this post dealt with a binary sentiment prediction, a similar approach can very well be followed for a multi-class prediction, such as predicting a star rating out of 5 for a movie or a product. Advances in the field of NLP have resulted in widespread use of sentiment anaylsis in many fields where there is some sort of user feedback, such as customer surveys, social media online shopping etc, where sentiment is mined from text to drive product improvement and marketing techniques such as recommender systems.
 
+## References
+
+The cover picture was taken from [here](http://images.clipartpanda.com/movie-clapper-clipart-4niB8EocA.jpeg) and [here](https://t4.ftcdn.net/jpg/01/29/11/91/240_F_129119177_184buzytsxpbgrWAa5JcRzMPybG5jKba.jpg)
+
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shCore.css">
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shThemeDefault.css">
 <script src="{{ site.baseurl }}/js/shCore.js"></script>
