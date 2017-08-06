@@ -264,7 +264,9 @@ Green dots indicate positive words and red dots negative.
 
 On zooming into two specific, highly polar regions marked in the above figure, we see what kind of words are being treated similarly by the network. 
 
-<img src="../images/sent_analysis/positive_and_negative_words.png">
+<img src="../images/sent_analysis/positive_words.png">
+
+<img src="../images/sent_analysis/negative_words.png">
 
 In the positive graph, we can see words like "fascinating", "wonderfully", "awesome", "masterpiece" and the like. The network has ascertained that these words carry a positive sentiment with roughly the same weightage. Similarly, in the negative graph, words that convey negative sentiment such as "disappointed", "ridiculous" and "cheap" can be observed. 
 
