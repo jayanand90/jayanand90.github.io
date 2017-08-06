@@ -6,13 +6,15 @@ excerpt_separator: <!--more-->
 
 One of the many things our brains do very well during language processing, is the task of abstracting out details, keeping only information that is relevant, and then proceeding to form a quick summary. For example, we could read a sizable paragraph of text (like an article), and come up with a one-line summary or a heading that best describes it. 
 
-<!--more-->
-
 Many times, we can also gauge the underlying mood that a passage of text conveys. For example, upon reading a product review on Amazon or eBay, we get an idea of whether the buyer was "happy", "angry", "disappointed" or something else. After reading a movie review, we know broadly whether the movie is "good" or "bad". Our brains are naturally adept at extracting "emotion" from mere text, which necessitates the following question: Can a computer do it ?  Given text (be it a single line or several pages), can a machine capture the emotion or sentiment that the text conveys ?     
 
 This is the fundamental question that Sentiment Analysis attempts to answer. It is an area of study that falls under the wider field of  [NLP](https://en.wikipedia.org/wiki/Natural_language_processing).
 
 In this post, we will attempt to address this question using movie reviews as an example.
+
+<img src="../images/sent_analysis/movie_sentiment.jpg">
+
+<!--more-->
 
 ## Why is it hard ?
 
