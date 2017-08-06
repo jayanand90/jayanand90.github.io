@@ -220,6 +220,8 @@ The output layer has just one unit, predicting 0 for a negative review and 1 for
 
 Reviews and labels from the training set (24,000 entries) are fed in one-by-one during forward propagation. The weights (connections between layers) are initialized randomly, with values being drawn from a normal distribution having a mean of zero. As the model trains during backpropagation, the weights continuously keep getting updated using [gradient descent](https://jayanand90.github.io/An-introduction-to-gradient-descent/). 
 
+&nbsp;
+
 <img src="../images/sent_analysis/training_results.png">
 
 ## Results
