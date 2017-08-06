@@ -182,10 +182,10 @@ The output is the following:
 
 
 
-    {'': 0,
-     'campfest'- 1,
-     'coffie'- 2,
-     'synch'- 3,
+     '': 0,
+     'campfest': 1,
+     'coffie': 2,
+     'synch': 3,
      'migrs': 4,
      'chrysler': 5,
      'frameworks': 6,
@@ -193,7 +193,7 @@ The output is the following:
      'pouchy': 8,
      'clanging': 9,
      'giacchino': 10,
-
+      ..
 
 &nbsp;
 
