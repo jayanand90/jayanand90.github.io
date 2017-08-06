@@ -180,6 +180,8 @@ for i,word in enumerate(set(total_counts)):
 The output is the following:
 
 
+
+
     {'': 0,
      'campfest': 1,
      'coffie': 2,
@@ -187,9 +189,11 @@ The output is the following:
      'migrs': 4,
      'chrysler': 5,
      'frameworks': 6,
-     ..
-     ..
-     }
+     'sensitiveness': 7,
+     'pouchy': 8,
+     'clanging': 9,
+     'giacchino': 10,
+
 
 &nbsp;
 
