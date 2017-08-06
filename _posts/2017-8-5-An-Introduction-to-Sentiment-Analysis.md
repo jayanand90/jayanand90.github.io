@@ -55,28 +55,28 @@ We will use the first 24,000 reviews (along with their labels) for training, and
 ## Let's begin!
 
 
-```python
+<pre class="brush: python">
 fr = open('reviews.txt','r')
 reviews = list(map(lambda a:a[:-1],fr.readlines()))
 fr.close()
-```
+</pre>
 
 
-```python
+<pre class="brush: python">
 fl = open('labels.txt','r')
 labels = list(map(lambda a:a[:-1],fl.readlines()))
 fl.close()
-```
+<pre>
 
 Let's take a look at some reviews and their labels to get a feel for the data.
 
 ------------
 
 
-```python
+<pre class="brush: python">
 ## The first review
 reviews[0]
-```
+</pre>
 
 
 
@@ -86,10 +86,10 @@ reviews[0]
 
 
 
-```python
+<pre class="brush: python">
 ## The label associated with the first review
 labels[0]
-```
+</pre>
 
 
 
@@ -101,10 +101,10 @@ labels[0]
 --------------------
 
 
-```python
+<pre class="brush: python">
 # The 64th review - that of the hindi movie Tashan!
 reviews[77] 
-```
+</pre>
 
 
 
@@ -114,9 +114,9 @@ reviews[77]
 
 
 
-```python
+<pre class="brush: python">
 labels[77] # Not surprisingly..
-```
+</pre>
 
 
 
@@ -138,7 +138,7 @@ Basically this involves the following steps:
 The example given in the above article illustrates these 3 steps well.
 
 
-```python
+<pre class="brush: python">
 ## Step 1 - Find number of unique words across all reviews
 
 from collections import Counter
@@ -148,13 +148,12 @@ for i in range(len(reviews)):
     sp_rv = rv.split(' ')
     for word in sp_rv:
         total_counts[word] += 1
-        
-```
+</pre>
 
 
-```python
+<pre class="brush: python">
 len(total_counts)
-```
+</pre>
 
 
 
@@ -168,13 +167,13 @@ There are 74,074 unique words in our dataset. We will represent each review usin
 &nbsp;
 
 
-```python
+<pre class="brush: python">
 ## Step 2- Create a dictionary/look-up table for each of these 74074 words
 
 word2index = {}
 for i,word in enumerate(set(total_counts)):
     word2index[word] = i
-```
+</pre>
 
 The output is the following:
 {'': 0,
@@ -227,11 +226,11 @@ With a very simple model and without spending much effort to fine-tune the model
 There is ample scope of improvement; many steps can be optimized further to yield better results. For instance, the most commonly appearing words in reviews are going to be "the", "a", "of" etc, regardless of whether labels are positive or negative. These words therefore add no value with regard to sentiment classification and can be consequenctly removed during training to improve accuracy.
 
 
-```python
+<pre class="brush: python">
 ## The 10 most common words across all reviews.
 
 total_counts.most_common(10)
-```
+</pre>
 
 
 
@@ -266,11 +265,6 @@ In the positive graph, we can see words like "fascinating", "wonderfully", "awes
 
 While this post dealt with a binary sentiment prediction, a similar approach can very well be followed for a multi-class prediction, such as predicting a star rating out of 5 for a movie or a product. Advances in the field of NLP have resulted in widespread use of sentiment anaylsis in many fields where there is some sort of user feedback, such as customer surveys, social media online shopping etc, where sentiment is mined from text to drive product improvement and marketing techniques such as recommender systems.
 
-
-
-{% highlight python linenos=table %}
-print("Conclusion")
-{% endhighlight %}
 
 <pre class="brush: python">
 X = np.array([ [0,0,1],[0,1,1],[1,0,1],[1,1,1] ])
