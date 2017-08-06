@@ -278,3 +278,13 @@ y = np.array([[0,1,1,0]]).T
 syn0 = 2*np.random.random((3,4)) - 1
 syn1 = 2*np.random.random((4,1)) - 1
 </pre>
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shCore.css">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shThemeDefault.css">
+<script src="{{ site.baseurl }}/js/shCore.js"></script>
+<script src="{{ site.baseurl }}/js/shLegacy.js"></script>
+<script src="{{ site.baseurl }}/js/shBrushPython.js"></script>
+<script type="text/javascript">
+	// SyntaxHighlighter.config.bloggerMode = true;
+	SyntaxHighlighter.config.toolbar = true;
+    SyntaxHighlighter.all();
