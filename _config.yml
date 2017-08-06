@@ -72,7 +72,7 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-highlighter: rogue
+highlighter: pygments
 
 # Use the following plug-ins
 gems:
