@@ -139,9 +139,10 @@ labels[77] # Not surprisingly..
 
 We can encode reviews using the [bag-of-words](https://en.wikipedia.org/wiki/Bag-of-words_model#Example_implementation) model.   
 Basically this involves the following steps:
-    1. Find out the number of unique words across all reviews. (say there are 'n')
-    2. Create a dictionary/look-up table so that each unique word is indexed by a unique number.
-    3. Transform each review into a feature vector of length n, based on the counts of words appearing in the review. 
+
+1. Find out the number of unique words across all reviews. (say there are 'n')
+2. Create a dictionary/look-up table so that each unique word is indexed by a unique number.
+3. Transform each review into a feature vector of length n, based on the counts of words appearing in the review. 
     
 The example given in the above article illustrates these 3 steps well.
 
@@ -235,7 +236,7 @@ With a very simple model and without spending much effort to fine-tune the model
 
 <img src="../images/sent_analysis/testing_results.png">
 
-There is ample scope of improvement; many steps can be optimized further to yield better results. For instance, the most commonly appearing words in reviews are going to be "the", "a", "of" etc, regardless of whether labels are positive or negative. These words therefore add no value with regard to sentiment classification and can be consequenctly removed during training to improve accuracy.
+There is ample scope of improvement; many steps can be optimized further to yield better results. For instance, the most commonly appearing words in reviews are going to be "the", "a", "of" etc, regardless of whether labels are positive or negative. These words therefore add no value with regard to sentiment classification and can be consequently removed during training to improve accuracy.
 
 
 <pre class="brush: python">
@@ -277,7 +278,7 @@ In the positive graph, we can see words like "fascinating", "wonderfully", "awes
 
 ## Conclusions
 
-While this post dealt with a binary sentiment prediction, a similar approach can very well be followed for a multi-class prediction, such as predicting a star rating out of 5 for a movie or a product. Advances in the field of NLP have resulted in widespread use of sentiment anaylsis in many fields where there is some sort of user feedback, such as customer surveys, social media online shopping etc, where sentiment is mined from text to drive product improvement and marketing techniques such as recommender systems.
+While this post dealt with a binary sentiment prediction, a similar approach can very well be followed for a multi-class prediction, such as predicting a star rating out of 5 for a movie or a product. Advances in the field of NLP have resulted in widespread use of sentiment analysis in many fields where there is some sort of user feedback, such as customer surveys, social media online shopping etc, where sentiment is mined from text to drive product improvement and marketing techniques such as recommender systems.
 
 ## References
 
