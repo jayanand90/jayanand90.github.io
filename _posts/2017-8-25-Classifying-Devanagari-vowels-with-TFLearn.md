@@ -284,6 +284,8 @@ As seen above, the test accuracy improves to 92%, meaning that data augmentation
 
 State-of-the-art computer vision techniques achieve much more than classification. Scene recogntion, object identification and labeling, video understanding are some areas that have seen tremendous improvement over the last few years. However, classification is the basic foundation over which these advanced techniques are built. Hope this post covered some ground in this regard and on how deep learning applies to classifcation tasks! 
 
+## [References](https://github.com/jayanand90/jayanand90.github.io/blob/master/images/devanagari_classification/references.txt)
+
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shCore.css">
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shThemeDefault.css">
 <script src="{{ site.baseurl }}/js/shCore.js"></script>
