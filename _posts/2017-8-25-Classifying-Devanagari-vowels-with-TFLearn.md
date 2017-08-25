@@ -69,7 +69,7 @@ Let's look at a sample of numbers from the classic [MNIST](http://yann.lecun.com
 
 <img src="../images/devanagari_classification/mnist_sample.png">
 
-Each image has a resolution of 28 pixels x 28 pixels. In a grayscale representation 0 represents a pure black, 255 represents pure white, and all integers in between represent various shades of gray. Thus to a computer, each MNIST image is a 28x28 matrix of pixel intensity values.  
+Each image has a resolution of 28 pixels x 28 pixels. In a grayscale representation **0** represents a pure black, **255** represents pure white, and all integers in between represent various shades of gray. Thus to a computer, each MNIST image is a 28x28 **matrix of pixel intensity values**.  
 
 For example, in the image of the "1", since most of the empty space is white pixels, most of its matrix values will be 255. The few pixels along the middle that mark the "1" will have values close to zero. (Some people reverse this convention of 0 and 255)
 
@@ -78,7 +78,7 @@ A color image, on the other hand, may follow the popular RGB scheme where there 
 
 <img src="../images/devanagari_classification/rgb_cats.png">
 
-So rather than focus on the question "What makes a cat *a cat*?", let's simplify it to a grayscale, 1-D question - "What makes a **'1'** a **'1'** ?
+So rather than focus on the question "What makes a cat *a cat*?", let's simplify it to a grayscale, 1-D question - "What makes a **'1'** a **'1'**" ?
 
 
 The answer is - the right pixel values in the right positions!  
@@ -212,8 +212,8 @@ print("Test accuracy: ", test_accuracy)
     Test accuracy:  0.87969924812
 
 
-The neural network manages to get an accuracy of ~88%.  
-&nbsp;
+The neural network manages to get an accuracy of **~88%**.  
+
 Let's look at some of the correct predictions.
 
 <img src="../images/devanagari_classification/correct_pred1.png">
@@ -236,7 +236,7 @@ Here are a couple of images that are classified *incorrectly*.
 <img src="../images/devanagari_classification/wrong_pred2.png">
 
 On looking closely, we can see why the network may have gotten confused while classifying the above images.  
-In the first image, which is intended to be 'अः', the two dots (*visarga*) at the right aren't properly visible; in fact, one dot is completely missing from the picture. This caused the network to think that the image is more likely an अ , as evinced by the predicition chart on the right.
+In the first image, which is intended to be 'अः', the two dots (*visarga*) at the right aren't properly visible; in fact, one dot is completely missing from the picture. This causes the network to think that the image is more likely an अ , as evinced by the predicition chart on the right.
 Similarly, in the second picture, because of the curve on the right, the network thinks that the image is more likely an ऊ.
 
 So what can we do to help the network classify better?
@@ -244,16 +244,16 @@ So what can we do to help the network classify better?
 ## Data augmentation
 
 The dataset is quite small, having only 221 images per vowel.   
-It would be nice if we had more samples, so that the neural network can learn better from many more varieties of the twelve vowels.
+It would be nice if we had more samples, so that the neural network can learn better from many **more varieties** of the twelve vowels.
 
 One way to artifically inflate the dataset is by using a technique called data augmentation.
 
 This would require us to artifically introduce *transformations* to our dataset, so that we have more sample images to train on.  
-There are many ways to do this - here will consider a few basic ones - rotation, distortion, and translation.
+There are many ways to do this - here will consider a few basic ones - **rotation**, **distortion**, and **translation**.
 
 <img src="../images/devanagari_classification/transformations.png">
 
-The transformations shown above are applied to each image in the dataset. This results in inflating the dataset to 5x its original size!
+The transformations shown above are applied to each image in the dataset. This results in inflating the dataset to **5x** its original size!
 It makes sense to do these transformations because:
 1. In reality, it is entirely possible that handwritten letters are imperfect; everybody ends up shifting, distorting or tilting characters while writing.
 2. In spite of these transformations, our brains effortlessly recognize these letters - so why not train the neural network to do so too ?
