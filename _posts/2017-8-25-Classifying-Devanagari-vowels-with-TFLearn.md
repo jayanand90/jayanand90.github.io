@@ -1,9 +1,14 @@
-
-# Classifying Devanagari vowels with TFLearn
+---
+layout: post
+title:  Classifying Devanagari vowels with TFLearn
+excerpt_separator: <!--more-->
+---
 
 The field of computer vision has made great strides over the last two decades, with signifact contributions from deep learning techniques during the last five years. Today, as self-driving cars that perform complex, real-time visual recognition tasks are within technological reach, let's take a look at the most fundamental vision task - that of classification. In this post, we will classify Devanagari vowels using TFLearn, a deep learning framework built on top of TensorFlow.
 
 <img src="../images/devanagari_classification/cover_pic.png">
+
+<!--more-->
 
 ## What is classification ?
 
@@ -105,7 +110,7 @@ The images in this dataset are 36 pixels x 36 pixels. This is the reason we have
 There are 12 output neurons, since we are trying to classify 12 distinct vowels. (The dataset doesn't contain ऋ and ॠ )
 
 
-```python
+<pre class="brush: python">
 # Load the dataset and get the output classes
 dataset = 'nhcd_small_vowels/'
 vowel_dirs = os.listdir(dataset)
@@ -113,7 +118,7 @@ classes = [vowel for vowel in vowel_dirs if os.path.isdir(dataset + vowel)]
 
 # Print classes. The twelve vowels.
 classes
-```
+</pre>
 
 
 
@@ -142,7 +147,7 @@ Let's now build the neural network as discussed above.
 The hidden layer size is set to 400 and the learning rate to 0.1
 
 
-```python
+<pre class="brush: python">
 def dev_vow_classifier():
 
     tf.reset_default_graph()
@@ -157,13 +162,13 @@ def dev_vow_classifier():
      
     full_nn = tflearn.DNN(neural_network)
     return full_nn
-```
+</pre>
 
 
-```python
+<pre class="brush: python">
 # Instantiate the neural network
 dvc = dev_vow_classifier()
-```
+</pre>
 
 As always, there are two stages involved:  
 
@@ -185,7 +190,7 @@ As always, there are two stages involved:
 The following steps train and test the model, and the testing accuray is reported at the end.
 
 
-```python
+<pre class="brush: python">
 # Training - trainX and trainY are training input data  and labels respectively
 dvc.fit(trainX, trainY, validation_set=0.1, show_metric=True, batch_size=5, n_epoch=20)
 
@@ -195,12 +200,12 @@ real_labels = testY.argmax(axis=1)
 test_accuracy = np.mean(predictions == real_labels, axis=0)
 
 print("Test accuracy: ", test_accuracy)
-```
+</pre>
 
 
-```python
-Test accuracy:  0.87969924812
-```
+
+            Test accuracy:  0.87969924812
+
 
 The neural network manages to get an accuracy of ~88%.  
 Let's look at some of the correct predictions.
@@ -249,7 +254,7 @@ It makes sense to do these transformations because:
 Now that we have a lot many more example to learn from , let's again train and test our neural network
 
 
-```python
+<pre class="brush: python">
 # Training with augmented dataset while retaining other settings
 dvc.fit(trainX, trainY, validation_set=0.1, show_metric=True, batch_size=5, n_epoch=20)
 
@@ -259,15 +264,25 @@ real_labels = testY.argmax(axis=1)
 test_accuracy = np.mean(predictions == real_labels, axis=0)
 
 print("Test accuracy: ", test_accuracy)
-```
+</pre>
 
 
-```python
-Test accuracy:  0.920226130653
-```
+
+            Test accuracy:  0.920226130653
+
 
 As seen above, the test accuracy improves to 92%, meaning that data augmentation proved useful.
 
 ## Conclusions
 
 State-of-the-art computer vision techniques achieve much more than classification. Scene recogntion, object identification and labeling, video understanding are some areas that have seen tremendous improvement over the last few years. However, classification is the basic foundation over which these advanced techniques are built. Hope this post covered some ground in this regard and on how deep learning applies to classifcation tasks! 
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shCore.css">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/shThemeDefault.css">
+<script src="{{ site.baseurl }}/js/shCore.js"></script>
+<script src="{{ site.baseurl }}/js/shLegacy.js"></script>
+<script src="{{ site.baseurl }}/js/shBrushPython.js"></script>
+<script type="text/javascript">
+	// SyntaxHighlighter.config.bloggerMode = true;
+	SyntaxHighlighter.config.toolbar = true;
+    SyntaxHighlighter.all();
