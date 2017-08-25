@@ -4,7 +4,7 @@ title:  Classifying Devanagari vowels with TFLearn
 excerpt_separator: <!--more-->
 ---
 
-The field of computer vision has made great strides over the last two decades, with signifact contributions from deep learning techniques during the last five years. Today, as self-driving cars that perform complex, real-time visual recognition tasks are within technological reach, let's take a look at the most fundamental vision task - that of classification. In this post, we will classify Devanagari vowels using TFLearn, a deep learning framework built on top of TensorFlow.
+The field of computer vision has made great strides over the last two decades, with significant contributions from deep learning techniques during the last five years. Today, as self-driving cars that perform complex, real-time visual recognition tasks are within technological reach, let's take a look at the most fundamental vision task - that of classification. In this post, we will classify Devanagari vowels using TFLearn, a deep learning framework built on top of TensorFlow.
 
 <img src="../images/devanagari_classification/cover_pic.png">
 
@@ -30,20 +30,22 @@ We may come up with an algorithm as follows:
 
 
 + if there is a circle of radius $r1$
-            AND
+            **AND**
 + if there are two smaller circles of radii $r2$, at a distance $d1$ from the origin
-            AND
-+ if there are two small triangles pointing in the NE and NW directions subtending an angle of 45 degrees each 
-            AND
+            **AND**
++ if there are two small triangles pointing in the NE and NW directions measuring 45 degrees each 
+            **AND**
 + so on and so forth ...
-            *THEN*
+            **THEN**
 + the image is a that of a cat! 
+
 
 We then proceed to test our algorithm on a random cat image.
 
 <img src="../images/devanagari_classification/cat_vs_outline_comparison.png">
 
 Since all conditions are seemingly met, we succesfully classify the image as that of a cat. Fantastic!
+
 
 But wait, what about these cats ?
 
@@ -54,10 +56,10 @@ If that was not enough to break our model, what about these ?
 <img src="../images/devanagari_classification/cats_2.png">
 
 We begin to realize that all cats need not be posing for passport-style photographs like how we had imagined. Even something as simple as a cat presents an infinite number of variations!     
-It is clearly impossible to code up shapes, sizes and orientations for all cats in the world.  
+It is clearly *impossible* to code up shapes, sizes and orientations for all cats in the world.  
 Also, there are an infinite number of objects in the world!
 
-On the contrary, a human being can trivially identify all of the above images as cats, even in images where only a small part of the cat is shown (like the cat hiding behind a wall). What is amazing is that we can identify cats in configurations we have never seen before, simply because we have *learnt* what a cat is, and we can always identify it succesfully regardless of what it's doing.   
+On the contrary, a human being can trivially identify all of the above images as cats, even in images where only a small part of the cat is shown (like the cat hiding behind a tree). What is amazing is that we can identify cats in configurations we have never seen before, simply because we have *learnt* what a cat is, and we can always identify it succesfully regardless of what it's doing.   
 So what is it exactly that our brains *learn* about a cat? How is the representation of a cat stored/programmed in our brains? 
 
 ## The world of pixels
@@ -68,14 +70,16 @@ Let's look at a sample of numbers from the classic [MNIST](http://yann.lecun.com
 <img src="../images/devanagari_classification/mnist_sample.png">
 
 Each image has a resolution of 28 pixels x 28 pixels. In a grayscale representation 0 represents a pure black, 255 represents pure white, and all integers in between represent various shades of gray. Thus to a computer, each MNIST image is a 28x28 matrix of pixel intensity values.  
+
 For example, in the image of the "1", since most of the empty space is white pixels, most of its matrix values will be 255. The few pixels along the middle that mark the "1" will have values close to zero. (Some people reverse this convention of 0 and 255)
 
 
 A color image, on the other hand, may follow the popular RGB scheme where there are 3 channels - one for each of red, green and blue. This just means that instead of one matrix, there are now three matrices of pixel values that define the image.
 
+<img src="../images/devanagari_classification/rgb_cats.png">
+
 So rather than focus on the question "What makes a cat *a cat*?", let's simplify it to a grayscale, 1-D question - "What makes a **'1'** a **'1'** ?
 
-<img src="../images/devanagari_classification/rgb_cats.png">
 
 The answer is - the right pixel values in the right positions!  
 Though seemingly obvious and simple, it's an insightful and powerful idea.
@@ -136,7 +140,7 @@ classes
      '11_am',
      '12_ah']
 
-
+&nbsp;
 
 Let's look at a couple of example vowels and their pixel intensity matrices.
 
@@ -158,8 +162,8 @@ def dev_vow_classifier():
     neural_network = tflearn.fully_connected(neural_network, 12, activation='softmax')
     
     #Specify the training mechanism
-    neural_network = tflearn.regression(neural_network,optimizer='sgd',learning_rate=0.1,loss='categorical_crossentropy')
-     
+    neural_network = tflearn.regression(neural_network,optimizer='sgd',learning_rate=0.1,\
+    							loss='categorical_crossentropy')
     full_nn = tflearn.DNN(neural_network)
     return full_nn
 </pre>
@@ -170,9 +174,10 @@ def dev_vow_classifier():
 dvc = dev_vow_classifier()
 </pre>
 
+&nbsp;
 As always, there are two stages involved:  
 
-1: Training
+1: **Training**
  - There are 221 images per class.
  - For each image, 'flatten' the pixel matrix and feed the 1296 pixel values into the input layer.
  - Randomly initialize weights.
@@ -181,13 +186,13 @@ As always, there are two stages involved:
  - Perform forward and backward propagation to learn the values of weights using [gradient descent](https://jayanand90.github.io/An-introduction-to-gradient-descent/).    
 
 
-2:  Testing
+2:  **Testing**
  - Run the neural network on previously unseen vowels (set aside initially)
  - Report test accuracy
 
 ## Results
 
-The following steps train and test the model, and the testing accuray is reported at the end.
+The following steps train and test the model, and the testing accuracy is reported at the end.
 
 
 <pre class="brush: python">
@@ -204,15 +209,17 @@ print("Test accuracy: ", test_accuracy)
 
 
 
-            Test accuracy:  0.87969924812
+    Test accuracy:  0.87969924812
 
 
 The neural network manages to get an accuracy of ~88%.  
+&nbsp;
 Let's look at some of the correct predictions.
 
 <img src="../images/devanagari_classification/correct_pred1.png">
-<img src="../images/devanagari_classification/correct_pred2.png">
 <img src="../images/devanagari_classification/correct_pred3.png">
+<img src="../images/devanagari_classification/correct_pred2.png">
+
 
 The neural network classifies the first and third pictures correctly with absolute confidence. (the x-axis represents confidence %)
 The second picture is also classified correctly, although only with ~75% confidence. The network thinks that there is a small chance that the vowel is an ए (~22%) or  आ (~3%), due to the way pixels are arranged in this particular picture.
@@ -268,7 +275,7 @@ print("Test accuracy: ", test_accuracy)
 
 
 
-            Test accuracy:  0.920226130653
+    Test accuracy:  0.920226130653
 
 
 As seen above, the test accuracy improves to 92%, meaning that data augmentation proved useful.
