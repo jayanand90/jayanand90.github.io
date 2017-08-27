@@ -244,7 +244,7 @@ So what can we do to help the network classify better?
 ## Data augmentation
 
 The dataset is quite small, having only 221 images per vowel.   
-It would be nice if we had more samples, so that the neural network can learn better from many **more varieties** of the twelve vowels.
+It would be nice if we had more samples, so that the neural network can learn better from **many more varieties** of the twelve vowels.
 
 One way to artifically inflate the dataset is by using a technique called data augmentation.
 
@@ -258,7 +258,7 @@ It makes sense to do these transformations because:
 1. In reality, it is entirely possible that handwritten letters are imperfect; everybody ends up shifting, distorting or tilting characters while writing.
 2. In spite of these transformations, our brains effortlessly recognize these letters - so why not train the neural network to do so too ?
 
-Now that we have a lot many more example to learn from , let's again train and test our neural network
+Now that we have a lot many more examples to learn from , let's again train and test our neural network
 
 
 <pre class="brush: python">
